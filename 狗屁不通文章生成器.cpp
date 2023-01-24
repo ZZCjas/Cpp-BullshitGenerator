@@ -1,4 +1,7 @@
-#include <bits/stdc++.h>
+#include <iostream>
+#include <string>
+#include <ctime>
+#include <cstdlib>
 using namespace std;
 string famous[] = { "爱迪生a，天才是百分之一的勤奋加百分之九十九的汗水。b",
     "查尔斯·史a，一个人几乎可以在任何他怀有无限热忱的事情上成功。b",
@@ -176,13 +179,13 @@ void shuffleall()
         swap(bosh[i],bosh[rand()%36]);
     }
 }
-void string_replace(std::string &strBig,const std::string &strsrc,const std::string &strdst)
+void string_replace(string &strBig,const string &strsrc,const string &strdst)
 {
-    std::string::size_type pos = 0;
-    std::string::size_type srclen = strsrc.size();
-    std::string::size_type dstlen = strdst.size();
+    string::size_type pos = 0;
+    string::size_type srclen = strsrc.size();
+    string::size_type dstlen = strdst.size();
 
-    while((pos=strBig.find(strsrc, pos))!=std::string::npos)
+    while((pos=strBig.find(strsrc, pos))!=string::npos)
     {
         strBig.replace(pos,srclen,strdst);
         pos+=dstlen;
@@ -200,7 +203,7 @@ string anotherpara()
 {
     return "\r\n    ";
 }
-int llll;
+int len;
 int main()
 {
     srand(time(0));
@@ -210,8 +213,9 @@ int main()
 		getline(cin,title);
 	}
     cout <<"Input length:";
-    cin>>llll;
-    for(size_t i=1;i<=llll;i++)
+    cin>>len;
+    cout<<"\n    ";
+    for(size_t i=1;i<=len;i++)
 	{
         string tmp2;
         while(tmp2.size()<600)
