@@ -236,5 +236,7 @@ int main()
         }
         cout<<"\n    "<<tmp2<<endl;
     }
+    cout<<endl<<endl;
+	system("pause");
     return 0;
 }
