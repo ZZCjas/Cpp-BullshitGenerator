@@ -162,19 +162,19 @@ string bosh[] = {"现在, 解决x的问题, 是非常非常重要的. 所以, ",
 string title;
 void shuffleall()
 {
-    for(int i=0;i<107;i++)
+    for(register int i=0;i<107;i++)
 	{
         swap(famous[i],famous[rand()%107]);
     }
-    for(int i=0;i<5;i++)
+    for(register int i=0;i<5;i++)
 	{
         swap(before[i],before[rand()%5]);
     }
-    for(int i=0;i<8;i++)
+    for(register int i=0;i<8;i++)
 	{
         swap(after[i],after[rand()%8]);
     }
-    for(int i=0;i<36;i++)
+    for(register int i=0;i<36;i++)
 	{
         swap(bosh[i],bosh[rand()%36]);
     }
@@ -184,7 +184,6 @@ void string_replace(string &strBig,const string &strsrc,const string &strdst)
     string::size_type pos = 0;
     string::size_type srclen = strsrc.size();
     string::size_type dstlen = strdst.size();
-
     while((pos=strBig.find(strsrc, pos))!=string::npos)
     {
         strBig.replace(pos,srclen,strdst);
@@ -215,7 +214,7 @@ int main()
     cout <<"Input length:";
     cin>>len;
     cout<<"\n    ";
-    for(size_t i=1;i<=len;i++)
+    for(register size_t i=1;i<=len;i++)
 	{
         string tmp2;
         while(tmp2.size()<600)
