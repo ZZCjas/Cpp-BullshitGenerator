@@ -213,7 +213,6 @@ int main()
 	}
     cout <<"Input length:";
     cin>>len;
-    cout<<"\n    ";
     for(register size_t i=1;i<=len;i++)
 	{
         string tmp2;
@@ -235,7 +234,7 @@ int main()
             }
             string_replace(tmp2,"x",title);
         }
-        cout<<tmp2<<endl;
+        cout<<"\n    "<<tmp2<<endl;
     }
     return 0;
 }
